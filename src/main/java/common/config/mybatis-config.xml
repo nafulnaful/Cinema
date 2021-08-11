@@ -35,12 +35,12 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
    <!-- 매퍼 정의================================ -->
    <mappers>
       <!-- <mapper resource="org/mybatis/example/BlogMapper.xml" /> -->
-      <mapper resource="movie.mapper.UserMapper.xml"/>
-      <mapper resource="movie.mapper.MovieMapper.xml"/>
-      <mapper resource="movie.mapper.EventMapper.xml"/>
-      <mapper resource="movie.mapper.ServiceMapper.xml"/>
-      <mapper resource="movie.mapper.BookMapper.xml"/>
-      <mapper resource="movie.mapper.CinemaMapper.xml"/>
+      <mapper resource="movie/mapper/UserMapper.xml"/>
+      <mapper resource="movie/mapper/MovieMapper.xml"/>
+      <mapper resource="movie/mapper/EventMapper.xml"/>
+      <mapper resource="movie/mapper/ServiceMapper.xml"/>
+      <mapper resource="movie/mapper/BookMapper.xml"/>
+      <mapper resource="movie/mapper/CinemaMapper.xml"/>
       
    </mappers>
 </configuration>

@@ -1,16 +1,20 @@
 package movie.daogroup;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.List;
+import common.dao.DAOMyBatis;
+import movie.vogroup.BookVO;
 
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-
-public class BookDAO {
+public class BookDAO extends DAOMyBatis {
 
 	private final String NS="movie.mapper.BookMapper";
 	// ¿¹¸Å
+	
+	public boolean addBook(BookVO bookVo) {
+		try {
+			ses = this.getSessionFactory().openSession();
+			int cnt = ses.insert(NS+".addBook", bookVo);
+			return transaction(cnt);
+		} finally {
+			close();
+		}
+	}
 }

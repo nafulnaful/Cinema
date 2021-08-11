@@ -14,6 +14,7 @@ public class MovieVO implements Serializable {
 	private String movie_class;
 	private String movie_poster;
 	private String movie_url;
+	private String movie_con_header;
 	private String movie_con;
 	
 	public MovieVO() {
@@ -21,7 +22,7 @@ public class MovieVO implements Serializable {
 	}
 	
 	public MovieVO(String movie_num, String movie_name, String movie_genre, Date movie_premier, String movie_director,
-			String movie_actor, String movie_class, String movie_poster, String movie_url,
+			String movie_actor, String movie_class, String movie_poster, String movie_url, String movie_con_header,
 			String movie_con) {
 		super();
 		this.movie_num = movie_num;
@@ -33,10 +34,19 @@ public class MovieVO implements Serializable {
 		this.movie_class = movie_class;
 		this.movie_poster = movie_poster;
 		this.movie_url = movie_url;
+		this.movie_con_header = movie_con_header;
 		this.movie_con = movie_con;
 	}
 	
 	
+	public String getMovie_con_header() {
+		return movie_con_header;
+	}
+
+	public void setMovie_con_header(String movie_con_header) {
+		this.movie_con_header = movie_con_header;
+	}
+
 	public String getMovie_num() {
 		return movie_num;
 	}

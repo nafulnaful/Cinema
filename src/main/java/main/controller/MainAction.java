@@ -9,8 +9,8 @@ public class MainAction extends AbstractAction {
 
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
-		// TODO Auto-generated method stub
-
+		this.setViewPage("/main.jsp");
+		this.setRedirect(false);//false
 	}
 
 }

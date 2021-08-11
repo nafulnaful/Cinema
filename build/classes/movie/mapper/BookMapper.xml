@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="movie.mapper.BookMapper">
+	<insert id="addBook" parameterType="Book">
+		insert into book_table(book_num, book_np, book_seat, book_point, book_price, book_day, book_status, time_num_fk, user_num_fk)
+		values(book_seq.nextval, ${book_np}, '${book_seat}', ${book_point}, ${book_price}, sysdate, '${book_status}', '${time_num_fk}', '${user_num_fk}')
+	</insert>
+</mapper>

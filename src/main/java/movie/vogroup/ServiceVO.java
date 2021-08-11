@@ -16,6 +16,27 @@ public class ServiceVO implements Serializable {
 		
 	}
 
+	
+	
+	/**
+	 * @param service_num
+	 * @param service_title
+	 * @param service_con
+	 * @param service_day
+	 * @param user_num_fk
+	 */
+	public ServiceVO(String service_num, String service_title, String service_con, Date service_day,
+			String user_num_fk) {
+		super();
+		this.service_num = service_num;
+		this.service_title = service_title;
+		this.service_con = service_con;
+		this.service_day = service_day;
+		this.user_num_fk = user_num_fk;
+	}
+
+
+
 	public ServiceVO(String service_num, String service_title, String service_con, Date service_day, String user_num_fk, String service_status) {
 		super();
 		this.service_num = service_num;

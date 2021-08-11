@@ -4,7 +4,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="movie.mapper.ServiceMapper">
-	<select id="" resultType="">
-		
+	<select id="qnaList" resultType="Service">
+		select * from service
+	</select>
+	<insert id="answer" parameterType="Answer">
+		insert into answer(answer_num, answer_id, answer_day, answer_con, service_num_fk)
+		values(answer_seq.nextval, '${answer_id}', sysdate, '${answer_con}', ${service_num_fk})
+	</insert>
+	<select id="selectService" resultType="Service" parameterType="string">
+		select * from service where service_num = ${value}
 	</select>
 </mapper>

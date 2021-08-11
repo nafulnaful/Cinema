@@ -18,9 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class FronController
  */
-@WebServlet(urlPatterns = { "*.me" }, initParams = {
+@WebServlet(urlPatterns = { "*.do" }, initParams = {
 		@WebInitParam(name = "config", 
-value = "C:\\MyJava\\Workspace\\MvcWeb\\src\\main\\webapp\\WEB-INF\\Command.properties") })
+value = "C:\\MyJava\\Workspace\\Cinema\\src\\main\\webapp\\WEB-INF\\Command.properties") })
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

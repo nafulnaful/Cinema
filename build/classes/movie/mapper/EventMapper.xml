@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="movie.mapper.EventMapper">
+	<select id="storeList" resultType="Store">
+		select * from store order by store_num
+	</select>
+	<select id="eventList" resultType="Event">
+		select * from event order by event_num
+	</select>
+	<insert id="addStore" parameterType="Store">
+		insert into store(store_num, store_name, store_price, store_img)
+		values(store_seq.nextval, '${store_name}', ${store_price}, '${store_img}')
+	</insert>
+	<insert id="addEvent" parameterType="Event">
+		insert into event(event_num, event_title, event_start, event_end, event_con)
+		values(event_seq.nextval, '${event_title}', ${event_start}, ${event_end}, '${event_con}')
+	</insert>
+</mapper>

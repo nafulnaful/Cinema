@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="theme.css" type="text/css">
+  <link rel="stylesheet" href="../theme.css" type="text/css">
 </head>
 
 <body style="" class="text-right">
@@ -32,7 +32,7 @@
         <ul class="navbar-nav">
           <li class="nav-item mx-2 text-light"> <a class="nav-link mt-3 mx-4" href="#">영화</a> </li>
           <li class="nav-item mx-2"> <a class="nav-link mt-3 mx-4" href="#">예매</a> </li>
-          <li class="img-fluid" style=""><img class="img-fluid d-block align-center" src="./images/logo_1.png" style="width: 180px;"></li>
+          <li class="img-fluid" style=""><img class="img-fluid d-block align-center" src="../images/logo_1.png" style="width: 180px;"></li>
           <li class="nav-item mx-2"> <a class="nav-link mt-3 mx-4" href="#">스토어</a> </li>
           <li class="nav-item mx-2"> <a class="nav-link mt-3 mx-4" href="#">이벤트</a> </li>
         </ul>

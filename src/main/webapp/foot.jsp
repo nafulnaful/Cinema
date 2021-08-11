@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
   <div class="py-4">
-    <div class="container"> 
+    <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="col-md-12 text-center d-md-flex align-items-center">
@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12"><img class="img-fluid d-block align-left" src="./images/logo_4.png" style="width: 180px;"></div>
+        <div class="col-md-12"><img class="img-fluid d-block align-left" src="../images/logo_4.png" style="width: 180px;"></div>
       </div>
       <div class="row">
         <div class="col-md-12">

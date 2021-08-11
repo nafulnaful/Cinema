@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="movie.mapper.CinemaMapper">
+	<select id="cinemaList" resultType="Cinema">
+		select * from cinema
+	</select>
+	<select id="roomList" resultType="Room" parameterType="string">
+		select * from room where room_num = '${value}'
+	</select>
+	<select id="timeList" resultType="Time" parameterType="string">
+		select * from time where time_num = '${value}'
+	</select>
+	<select id="seatList" resultType="Seat" parameterType="string">
+		select * from seat where time_num_fk = '${value}'
+	</select>
+	
+	<insert id="addTime" parameterType="Time">
+		insert into time(time_num, time_day, time_start, time_end, movie_num_fk, cinema_num_fk, room_num_fk)
+		values(time_seq.nextval, '${time_day}', '${time_start}', '${time_end}', ${movie_num_fk}, ${cinema_num_fk}, ${room_num_fk})
+	</insert>
+	<update id="updateSeat" parameterType="Seat">
+		update seat set seat_status = 'y' where seat_num = '${seat_num}' and time_num_fk = ${time_num_fk} 
+	</update>
+</mapper>

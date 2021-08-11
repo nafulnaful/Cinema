@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="movie.mapper.UserMapper">
+	<select id="login" resultType="User" parameterType="User">
+		select *
+		from user_table
+		where user_id='${user_id}' and user_pass='${user_pass}'
+	</select>
+	<insert id="join" parameterType="User">
+		insert into user_table(user_num, user_id, user_pass, user_name, user_birth, user_sex, user_email,
+		user_call1, user_call2, user_call3, user_zipcode, user_addr1, user_addr2)
+		values(user_seq.nextval, '${user_id}', '${user_pass}', '${user_name}', '${user_birth}', '${user_sex}',
+		'${user_email}', '${user_call1}', '${user_call2}', '${user_call3}', '${user_zipcode}', '${user_addr1}', 
+		'${user_addr2}')
+	</insert>
+	<select id="myQnaList" resultType="Service" parameterType="User">
+		select * 
+		from service
+		where user_num_fk='${user_num}'
+		order by service_day
+	</select>
+	<insert id="addQna" parameterType="Service">
+		insert into service(service_num, service_title, service_con, service_day, user_num_fk)
+		values(service_seq.nextval, '${service_title}', '${service_con}', sysdate, '${user_num_fk}')
+	</insert>
+</mapper>

@@ -1,6 +1,9 @@
 package movie.daogroup;
 
+import java.util.List;
+
 import common.dao.DAOMyBatis;
+import movie.vogroup.ServiceVO;
 import movie.vogroup.UserVO;
 
 public class UserDAO extends DAOMyBatis {
@@ -28,12 +31,30 @@ public class UserDAO extends DAOMyBatis {
 		}
 	}
 	
-	// 마이페이지 - 포인트, 예매내역, 상품내역(store)
-	
 	// qna
+	public List<ServiceVO> myQnaList(UserVO userVo){
+		try {
+			ses = this.getSessionFactory().openSession();
+			List<ServiceVO> qnaList = ses.selectList(NS + ".myQnaList", userVo);
+			return qnaList;
+			
+		} finally {
+			close();
+		}
+	}
+	
+	public boolean addQna(ServiceVO serviceVo) {
+		try {
+			ses = this.getSessionFactory().openSession();
+			int cnt = ses.insert(NS+".addQna", serviceVo);
+			return transaction(cnt);
+		} finally {
+			close();
+		}
+		
+		
+	}
 	
 	// 예매내역 - 영화명, 이미지, 상영관, 시간
-	
-	
 	
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="movie.mapper.MovieMapper">
+	<select id="boxOfficeList" resultType="Movie">
+		select * from movie;
+	</select>
+	<select id="newMovieList" resultType="Movie">
+		select * from movie where movie_premier > sysdate - 30 and movie_premier <![CDATA[ < ]]> sysdate order by movie_premier
+	</select>
+	<select id="planMovieList" resultType="Movie">
+		select * from movie where movie_premier > sysdate order by movie_premier
+	</select>
+	<select id="findMovieList" resultType="Movie" parameterType="string">
+		select * from movie where movie_name like '%${value}%'
+	</select>
+	<insert id ="addMovie" parameterType="Movie">
+		insert into movie(movie_num, movie_name, movie_genre, movie_premier, movie_director, movie_actor, movie_class, movie_poster, movie_url, movie_con_header, movie_con)
+		values(movie_seq.nextval, '${movie_name}', '${movie_genre}', to_date('${movie_premier}', 'YYYY-MM-DD'), '${movie_director}', '${movie_actor}', '${movie_class}', '${movie_poster}', '${movie_url}', '${movie_con_header}', '${movie_con}')
+	</insert>
+
+	<select id="reviewList" resultType="Review">
+		select * from review
+	</select>
+	<insert id="addReview" parameterType="Review">
+		insert into review(review_num, review_star, review_con, review_day, movie_num_fk, user_num_fk)
+		values(review_seq.nextval, ${review_star}, ${review_con}, ${review_day}, ${movie_num_fk}, ${user_num_fk})
+	</insert>
+</mapper>
