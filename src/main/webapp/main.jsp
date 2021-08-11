@@ -9,17 +9,17 @@
         <div class="col-md-12">
           <div class="carousel slide" data-ride="carousel" id="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active"> <img class="d-block img-fluid w-100" src=".../images/banner1.jpg" style="">
+              <div class="carousel-item active"> <img class="d-block img-fluid w-100" src="../images/banner1.jpg" style="">
               </div>
-              <div class="carousel-item"> <img class="d-block img-fluid w-100" src=".../images/banner2.jpg" style="">
+              <div class="carousel-item"> <img class="d-block img-fluid w-100" src="../images/banner2.jpg" style="">
                 <div class="carousel-caption">
                 </div>
               </div>
-              <div class="carousel-item"> <img class="d-block img-fluid w-100" src=".../images/banner3.jpg">
+              <div class="carousel-item"> <img class="d-block img-fluid w-100" src="../images/banner3.jpg">
                 <div class="carousel-caption">
                 </div>
               </div>
-              <div class="carousel-item"> <img class="d-block img-fluid w-100" src=".../images/banner4.jpg">
+              <div class="carousel-item"> <img class="d-block img-fluid w-100" src="../images/banner4.jpg">
                 <div class="carousel-caption">
                 </div>
               </div>
